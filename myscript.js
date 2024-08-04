@@ -1,7 +1,7 @@
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
-
+let displayValue = null;
 
 function add(num1,num2){
     return num1 + num2;
