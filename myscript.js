@@ -19,13 +19,16 @@ function divide(num1,num2){
     return num1 / num2;
 }
 
-const buttons = ["0","1","2","3","4","5","6","7","8","9","+","-","*","/","clr","="];
+const buttons = ["1","2","3","+","4","5","6","-","7","8","9","*","clr","0","=","/"];
 
-buttons.forEach(createButtons);
-
-function createButtons(){
+for (value in buttons){
     const container = document.querySelector(".numpad");
     const btn = document.createElement("button");
     btn.classList.add("btn");
+    btn.textContent = buttons[value];
+    btn.style.fontSize = "18px";
+    btn.style.fontWeight = "600";
     container.appendChild(btn);
+
+
 }
