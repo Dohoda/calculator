@@ -26,7 +26,7 @@ for (value in buttons){
     const btn = document.createElement("button");
     btn.classList.add("btn");
     btn.textContent = buttons[value];
-    btn.style.fontSize = "18px";
+    btn.style.fontSize = "36px";
     btn.style.fontWeight = "600";
     container.appendChild(btn);
 
