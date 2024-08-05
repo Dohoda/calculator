@@ -33,7 +33,7 @@ body {
 
 .btn{ 
     background-color: yellowgreen;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 8px;
     display: flex;
     flex: 1 0 25%;
