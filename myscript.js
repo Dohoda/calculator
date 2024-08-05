@@ -29,6 +29,4 @@ for (value in buttons){
     btn.style.fontSize = "36px";
     btn.style.fontWeight = "600";
     container.appendChild(btn);
-
-
 }
