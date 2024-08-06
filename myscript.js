@@ -7,7 +7,7 @@ function add(num1,num2){
     return num1 + num2;
 }
 
-function substract(num1,num2){
+function subtract(num1,num2){
     return num1 - num2;
 }
 
@@ -36,7 +36,7 @@ switch(num1,operator,num2){
     return add(num1,num2);
     break;
     case(operator == "-"):
-    return substract(num1,num2);
+    return subtract(num1,num2);
     break;
     case(operator == "*"):
     return multiply(num1,num2);
