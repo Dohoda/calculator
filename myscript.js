@@ -31,17 +31,4 @@ for (value in buttons){
     container.appendChild(btn);
 }
 
-switch(num1,operator,num2){
-    case(operator == "+"):
-    return add(num1,num2);
-    break;
-    case(operator == "-"):
-    return subtract(num1,num2);
-    break;
-    case(operator == "*"):
-    return multiply(num1,num2);
-    break;
-    case(operator == "/"):
-    return divide(num1,num2);
-    break;
-}
+
