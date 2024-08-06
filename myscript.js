@@ -31,4 +31,16 @@ for (value in buttons){
     container.appendChild(btn);
 }
 
+function displayInput(){
+    text.textContent += btn.textContent;
+}
 
+const text = document.querySelector(".calcDisplay");
+text.style.fontSize = "30px";
+text.style.fontWeight = "600";
+
+const btn = document.querySelectorAll(".btn");
+
+btn.forEach(function(button){
+    button.addEventListener("click",displayInput);
+})
