@@ -1,8 +1,10 @@
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
+let operatorClicked = false;
 let firstDisplay = "";
 let secondDisplay = "";
+let equalClicked = "";
 let result = "";
 
 function add(num1,num2){
@@ -62,9 +64,22 @@ function displayInput(num){
     text.textContent += num;
 }
 
+function operatorClick(op){
+    firstNumber = text.textContent;
+    operator = op;
+    operatorClicked = true;
+    text.textContent = "";
+}
+
 btn.forEach(function (button){
     button.addEventListener("click",function(e){
         return displayInput(e.target.textContent);
+    });
+});
+
+btnOp.forEach(function (button){
+    button.addEventListener("click",function(e){
+        return operatorClick(e.target.textContent);
     });
 });
 
