@@ -68,3 +68,21 @@ btn.forEach(function(button){
         return displayInput(e.target.textContent)
     });
 });
+
+function operate(firstNumber,secondNumber,operator){
+
+    switch(operator){
+        case "+":
+            add(firstNumber,secondNumber);
+        break;
+        case "-":
+            subtract(firstNumber,secondNumber);
+        break;
+        case "*":
+            multiply(firstNumber,secondNumber);
+        break;
+        case "/":
+            divide(firstNumber,secondNumber);
+        break;
+    }
+}
