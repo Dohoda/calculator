@@ -63,13 +63,13 @@ function displayInput(num){
 function operatorClick(op){
     firstNumber = text.textContent;
     operator = op;
-    operatorClicked = true;
-    text.textContent = "";
+    text.textContent += op;
+    text.textContent.split(op);
 }
 
 function resultClicked(){
-    secondNumber = text.textContent;
-    text.textContent = "";
+    secondNumber = text.textContent[1];
+    text.textContent.toString();
     operate(firstNumber,secondNumber,operator);
 }
 
