@@ -2,6 +2,7 @@ let firstNumber = null;
 let secondNumber = null;
 let operator = null;
 let result = "";
+let tempContent = "";
 
 function add(num1,num2){
     text.textContent = +num1 + +num2;
@@ -16,7 +17,12 @@ function multiply(num1,num2){
 }
 
 function divide(num1,num2){
-    text.textContent = +num1 / +num2;
+    if(num2 == "0"){
+        text.textContent = "undefined";
+    }
+    else if (num2 != "0"){
+        text.textContent = +num1 / +num2;
+    }
 }
 
 const text = document.querySelector(".calcDisplay");
@@ -64,12 +70,11 @@ function operatorClick(op){
     firstNumber = text.textContent;
     operator = op;
     text.textContent += op;
-    text.textContent.split(op);
 }
 
 function resultClicked(){
-    secondNumber = text.textContent[1];
-    text.textContent.toString();
+    tempContent = text.textContent.split(operator);
+    secondNumber = tempContent[1];
     operate(firstNumber,secondNumber,operator);
 }
 
