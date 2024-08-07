@@ -1,7 +1,6 @@
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
-let result = "";
 let tempContent = "";
 
 function add(num1,num2){
