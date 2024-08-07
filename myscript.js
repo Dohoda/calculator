@@ -6,7 +6,7 @@ let secondDisplay = "";
 let result = "";
 
 function add(num1,num2){
-    return num1 + num2;
+    text.textContent = num1 + num2;
 }
 
 function subtract(num1,num2){
@@ -25,14 +25,6 @@ const text = document.querySelector(".calcDisplay");
 text.style.fontSize = "30px";
 text.style.fontWeight = "600";
 text.textContent = "";
-
-const btn = document.querySelectorAll(".btn");
-
-const btnOp = document.querySelectorAll(".btn-operator");
-
-const btnClear = document.querySelector(".btn-clear");
-
-const btnEqual = document.querySelector(".btn-equal");
 
 const buttons = ["1","2","3","+","4","5","6","-","7","8","9","*","clr","0","=","/"];
 
@@ -58,19 +50,25 @@ for (value in buttons){
     container.appendChild(btn);
 }
 
+const btn = document.querySelectorAll(".btn");
+
+const btnOp = document.querySelectorAll(".btn-operator");
+
+const btnClear = document.querySelector(".btn-clear");
+
+const btnEqual = document.querySelector(".btn-equal");
+
 function displayInput(num){
     text.textContent += num;
 }
 
-
-btn.forEach(function(button){
+btn.forEach(function (button){
     button.addEventListener("click",function(e){
-        return displayInput(e.target.textContent)
+        return displayInput(e.target.textContent);
     });
 });
 
-function operate(firstNumber,secondNumber,operator){
-
+function operate(firstNumber,secondNumber,operator){ 
     switch(operator){
         case "+":
             add(firstNumber,secondNumber);
