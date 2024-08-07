@@ -1,26 +1,22 @@
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
-let operatorClicked = false;
-let firstDisplay = "";
-let secondDisplay = "";
-let equalClicked = "";
 let result = "";
 
 function add(num1,num2){
-    text.textContent = num1 + num2;
+    text.textContent = +num1 + +num2;
 }
 
 function subtract(num1,num2){
-    return num1 - num2;
+    text.textContent = +num1 - +num2;
 }
 
 function multiply(num1,num2){
-    return num1 * num2;
+    text.textContent = +num1 * +num2;
 }
 
 function divide(num1,num2){
-    return num1 / num2;
+    text.textContent = +num1 / +num2;
 }
 
 const text = document.querySelector(".calcDisplay");
@@ -71,6 +67,19 @@ function operatorClick(op){
     text.textContent = "";
 }
 
+function resultClicked(){
+    secondNumber = text.textContent;
+    text.textContent = "";
+    operate(firstNumber,secondNumber,operator);
+}
+
+function resetCalculator(){
+    text.textContent = "";
+    firstNumber = null;
+    secondNumber = null;
+    operator = null;
+}
+
 btn.forEach(function (button){
     button.addEventListener("click",function(e){
         return displayInput(e.target.textContent);
@@ -81,6 +90,14 @@ btnOp.forEach(function (button){
     button.addEventListener("click",function(e){
         return operatorClick(e.target.textContent);
     });
+});
+
+btnEqual.addEventListener("click",function(){
+    resultClicked();
+});
+
+btnClear.addEventListener("click",function(){
+    resetCalculator();
 });
 
 function operate(firstNumber,secondNumber,operator){ 
