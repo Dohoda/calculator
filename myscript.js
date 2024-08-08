@@ -65,6 +65,8 @@ const btnClear = document.querySelector(".btn-clear");
 
 const btnEqual = document.querySelector(".btn-equal");
 
+const btnDecimal = document.querySelector(".btn-decimal");
+
 function displayInput(num){
     text.textContent += num;
 }
@@ -118,6 +120,10 @@ btnEqual.addEventListener("click",function(){
 
 btnClear.addEventListener("click",function(){
     resetCalculator();
+});
+
+btnDecimal.addEventListener("click",function(e){
+    return displayInput(e.target.textContent);
 });
 
 function operate(firstNumber,secondNumber,operator){ 
