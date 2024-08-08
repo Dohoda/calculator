@@ -106,6 +106,7 @@ function resetCalculator(){
     firstNumber = null;
     secondNumber = null;
     operator = null;
+    operatorCheck = false;
 }
 
 btn.forEach(function (button){
