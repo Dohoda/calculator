@@ -91,8 +91,14 @@ function resultClicked(){
     tempContent = text.textContent.split(operator);
     firstNumber = tempContent[0];
     secondNumber = tempContent[1];
-    operate(firstNumber,secondNumber,operator);
-    operatorCheck = false;
+    if(secondNumber == ""){
+        text.textContent = firstNumber;
+        operatorCheck = false;
+    }
+    else{
+        operate(firstNumber,secondNumber,operator);
+        operatorCheck = false;
+    }
 }
 
 function resetCalculator(){
