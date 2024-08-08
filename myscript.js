@@ -1,6 +1,7 @@
 let firstNumber = null;
 let secondNumber = null;
 let operator = null;
+let operatorCheck = false;
 let tempContent = "";
 
 function add(num1,num2){
@@ -66,15 +67,27 @@ function displayInput(num){
 }
 
 function operatorClick(op){
-    firstNumber = text.textContent;
-    operator = op;
-    text.textContent += op;
+    if(operatorCheck == false){
+        operator = op;
+        text.textContent += op;
+        operatorCheck = true;
+    }
+    else if (operatorCheck == true){
+        tempContent = text.textContent.split(operator);
+        firstNumber = tempContent[0];
+        secondNumber = tempContent[1];
+        operate(firstNumber,secondNumber,operator);
+        operator = op;
+        text.textContent += op;
+    }
 }
 
 function resultClicked(){
     tempContent = text.textContent.split(operator);
+    firstNumber = tempContent[0];
     secondNumber = tempContent[1];
     operate(firstNumber,secondNumber,operator);
+    operatorCheck = false;
 }
 
 function resetCalculator(){
