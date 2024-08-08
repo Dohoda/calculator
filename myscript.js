@@ -30,7 +30,7 @@ text.style.fontSize = "30px";
 text.style.fontWeight = "600";
 text.textContent = "";
 
-const buttons = ["1","2","3","+","4","5","6","-","7","8","9","*","clr","0","=","/"];
+const buttons = ["1","2","3","+","4","5","6","-","7","8","9","*",".","0","=","/","clr"];
 
 for (value in buttons){
     const container = document.querySelector(".numpad");
@@ -44,6 +44,9 @@ for (value in buttons){
     }
     else if (btn.textContent == "+" || btn.textContent == "-" || btn.textContent == "*" || btn.textContent == "/"){
         btn.classList.add("btn-operator");
+    }
+    else if(btn.textContent == "."){
+        btn.classList.add("btn-decimal");
     }
     else{
         btn.classList.add("btn");
