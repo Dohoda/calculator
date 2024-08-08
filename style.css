@@ -31,8 +31,18 @@ body {
     flex-wrap: wrap;
 }
 
-#btn{ 
-    background-color: green;
+.btn,.btn-equal,.btn-clear{ 
+    background-color:#217C7E;
+    border: 2px solid black;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 25%;
+}
+
+.btn-operator{
+    background-color: orange;
     border: 2px solid black;
     border-radius: 8px;
     display: flex;
