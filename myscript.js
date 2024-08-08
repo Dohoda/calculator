@@ -30,13 +30,13 @@ text.style.fontSize = "30px";
 text.style.fontWeight = "600";
 text.textContent = "";
 
-const buttons = ["1","2","3","+","4","5","6","-","7","8","9","*",".","0","=","/","clr"];
+const buttons = ["1","2","3","+","4","5","6","-","7","8","9","*",".","0","=","/","Clear"];
 
 for (value in buttons){
     const container = document.querySelector(".numpad");
     const btn = document.createElement("button");
     btn.textContent = buttons[value];
-    if(btn.textContent == "clr"){
+    if(btn.textContent == "Clear"){
         btn.classList.add("btn-clear");
     }
     else if(btn.textContent == "="){
